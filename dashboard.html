@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Dashboard | EdgeCare AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<a class="logo" href="index.html">
+♡ <span>EdgeCare <b>AI</b></span>
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a class="active" href="dashboard.html">Dashboard</a>
+<a href="alerts.html">Alerts</a>
+<a href="history.html">History</a>
+<a href="privacy.html">Privacy</a>
+<a href="about.html">About</a>
+
+</nav>
+
+</header>
+
+
+<main class="page">
+
+<div class="page-head">
+
+<div>
+
+<span class="eyebrow">LIVE MONITOR</span>
+
+<h1>Health Dashboard</h1>
+
+<p>
+Automatically simulated wearable readings •
+Updated every 2 seconds
+</p>
+
+</div>
+
+<div class="live">
+<i></i> Live
+</div>
+
+</div>
+
+
+<div class="metric-grid">
+
+
+<div class="metric heart">
+
+<span>♥</span>
+
+<label>Heart Rate</label>
+
+<strong id="bpm">78</strong>
+
+<em>BPM</em>
+
+<small>Normal range</small>
+
+</div>
+
+
+<div class="metric oxygen">
+
+<span>◉</span>
+
+<label>SpO₂</label>
+
+<strong id="spo2">98</strong>
+
+<em>%</em>
+
+<small>Oxygen saturation</small>
+
+</div>
+
+
+<div class="metric movement">
+
+<span>⌁</span>
+
+<label>Movement</label>
+
+<strong id="movement">Normal</strong>
+
+<small id="movementSub">Active</small>
+
+</div>
+
+
+<div class="metric ai">
+
+<span>🧠</span>
+
+<label>AI Prediction</label>
+
+<strong id="risk">Normal</strong>
+
+<small id="riskSub">No abnormal pattern</small>
+
+</div>
+
+</div>
+
+
+<div id="alertBanner" class="alert-banner hidden"></div>
+
+
+<div class="dashboard-grid">
+
+
+<section class="panel chart-panel">
+
+<div class="panel-head">
+
+<h2>Live Sensor Trends</h2>
+
+<span id="updated">Updated now</span>
+
+</div>
+
+<canvas
+id="healthChart"
+width="900"
+height="330">
+</canvas>
+
+</section>
+
+
+<section class="panel">
+
+<h2>Edge AI Status</h2>
+
+<div class="ai-circle" id="aiCircle">
+✓
+</div>
+
+<h3 class="center" id="statusTitle">
+Everything looks good
+</h3>
+
+<p class="center muted" id="statusText">
+Health parameters are within the normal demo range.
+</p>
+
+
+<div class="privacy-mini">
+
+🔒 <b>Local Processing</b>
+
+<small>
+No raw readings are uploaded.
+</small>
+
+</div>
+
+</section>
+
+</div>
+
+
+<div class="panel">
+
+<div class="panel-head">
+
+<h2>Current Processing</h2>
+
+<span class="tag">
+EDGE DEVICE SIMULATION
+</span>
+
+</div>
+
+
+<div class="process">
+
+<div>Sensor Stream</div>
+
+<b>→</b>
+
+<div>Preprocessing</div>
+
+<b>→</b>
+
+<div>AI Model</div>
+
+<b>→</b>
+
+<div>Risk Alert</div>
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<div class="logo">
+♡ <span>EdgeCare <b>AI</b></span>
+</div>
+
+<p>
+Prototype only — readings are simulated.
+</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+<script>
+initDashboard();
+</script>
+
+</body>
+</html>
